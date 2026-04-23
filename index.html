@@ -627,6 +627,57 @@ body {
   color: rgba(244,237,224,0.3);
   position: relative;
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html, body {
+    width: auto !important;
+    max-width: none !important;
+    overflow: visible !important;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding-top: 36px !important;
+  }
+
+  .hero-kicker,
+  .hero-name,
+  .hero-invite,
+  .hero-date-row {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .section,
+  .prog-bg,
+  .contact-bg,
+  .finale {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .prog-item,
+  .feat-card,
+  .faq-item,
+  .contact-card,
+  .quote-block {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+}
 </style>
 </head>
 <body>
@@ -660,10 +711,13 @@ body {
 <div class="section">
   <div class="sec-label">Как это будет</div>
 
-  <div class="format-lead">Утро в движении,<br>вечер в хорошей<br>компании</div>
+  <div class="format-lead">Хочу, чтобы этот день<br>был для нас<br>спортивно-оздоровительным</div>
 
   <div class="format-body">
-    Я хотел бы, чтобы этот день начался именно так — в движении, на свежем воздухе, рядом с теми, кто мне важен. Забег вдоль набережной, а после финиша — горячая баня, вкусная еда и неспешный отдых в загородном доме.
+    Предлагаю начать день с движения на свежем воздухе и провести его с теми, кто мне близок по духу и важен по жизни.<br><br>
+    В 45 лет бег для меня стал не только физической нагрузкой, но и частью ежедневной рутины, от которой я по-настоящему кайфую.<br><br>
+    В этот день предлагаю всем желающим пробежать со мной десяточку, а после поехать попариться в бане и вкусно пообедать.<br><br>
+    Для тех, у кого нет возможности бежать — будет возможность прогуляться и вместе с нами насладиться этим воскресным утром.
   </div>
 
   <div class="quote-block">
@@ -687,9 +741,9 @@ body {
     </div>
     <div class="prog-card">
       <div class="prog-card-title">Сбор на старте</div>
-      <div class="prog-card-desc">Встречаемся на парковке у спуска к набережной со стороны Центрального парка. Ориентир — офисное здание по ул. Дубровинского, А106.</div>
-      <a class="prog-map-link" href="https://yandex.ru/maps/62/krasnoyarsk/?text=%D1%83%D0%BB.+%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%8F%D1%80%D1%81%D0%BA" target="_blank">
-        📍 Открыть точку на карте
+      <div class="prog-card-desc">Смотровая площадка, ул. Дубровинского, 45А/1. Заезд на парковку напротив офисного центра Дубровинского, 106.</div>
+      <a class="prog-map-link" href="https://2gis.ru/krasnoyarsk/search/%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%BE%D0%B2%D0%B0%D1%8F+%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%BA%D0%B0+%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE+45%D0%90" target="_blank">
+        📍 Смотровая площадка, Дубровинского 45А
       </a>
     </div>
   </div>
@@ -702,43 +756,49 @@ body {
       <div class="prog-connector"></div>
     </div>
     <div class="prog-card">
-      <div class="prog-card-title">Забег</div>
-      <div class="prog-card-desc">Два маршрута — выбирайте по настроению и самочувствию.</div>
+      <div class="prog-card-title">Забег 10 км</div>
+      <div class="prog-card-desc">Набережная Енисея. Стартуем вместе — финишируем в своём темпе.</div>
       <div class="prog-tags">
         <span class="prog-tag">10 км · основной</span>
-        <span class="prog-tag">5 км · лёгкий</span>
       </div>
       <div class="prog-note" style="margin-top:12px">
-        <div class="prog-note-text">Кто финишировал раньше — отдыхает, переодевается, ждёт остальных. Торопиться некуда: стартуем вместе, финишируем в своём темпе.</div>
+        <div class="prog-note-text">Для тех, у кого нет возможности бежать — будет возможность прогуляться и вместе с нами насладиться этим воскресным утром.</div>
       </div>
     </div>
   </div>
 
-  <!-- ~11:00 -->
+  <!-- 11:00–12:00 -->
   <div class="prog-item">
     <div class="prog-left">
-      <div class="prog-time">~11:00</div>
+      <div class="prog-time">11:00</div>
       <div class="prog-dot"></div>
       <div class="prog-connector"></div>
     </div>
     <div class="prog-card">
-      <div class="prog-card-title">Все финишировали — едем</div>
-      <div class="prog-card-desc">После того как вся компания завершила дистанцию, перемещаемся на загородную локацию.</div>
-      <a class="prog-map-link" href="https://yandex.ru/maps/62/krasnoyarsk/?text=%D1%83%D0%BB.+%D0%93%D1%80%D0%B0%D1%84%D0%B0+%D0%9B%D1%8C%D0%B2%D0%B0+%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B3%D0%BE+4+%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D1%8F%D1%80%D1%81%D0%BA" target="_blank">
-        📍 ул. Графа Льва Толстого, 4 (ст. Минина)
+      <div class="prog-card-title">Перемещение из точки А в точку Б</div>
+      <div class="prog-card-desc">Едем на основную локацию — ул. Графа Льва Толстого, 4 (Минино).</div>
+      <a class="prog-map-link" href="https://2gis.ru/krasnoyarsk/geo/985798073734108/92.542214,56.066721" target="_blank">
+        📍 ул. Графа Льва Толстого, 4
       </a>
+      <a class="prog-map-link" href="https://2gis.ru/krasnoyarsk/geo/985798073734106/92.535404,56.065292" target="_blank" style="margin-top:6px">
+        🔒 Проходная, КПП
+      </a>
+      <div class="prog-note" style="margin-top:12px">
+        <div class="prog-note-text">Заблаговременно прошу подтвердить участие в забеге и оздоровительной программе в Минино, указать на каком этапе и где вас ожидать, а также госномер автомобиля за сутки до поездки — для подачи единым списком на КПП.</div>
+      </div>
     </div>
   </div>
 
-  <!-- 11:00–15:00 -->
+  <!-- 12:00–17:00 -->
   <div class="prog-item">
     <div class="prog-left">
-      <div class="prog-time">11–15</div>
+      <div class="prog-time">12–17</div>
       <div class="prog-dot muted"></div>
     </div>
     <div class="prog-card">
-      <div class="prog-card-title">Основная часть</div>
-      <div class="prog-card-desc">Загородный дом, баня, еда с огня, музыка на улице и хорошая атмосфера. Никакого строгого расписания — всё в своё время и в своём ритме.</div>
+      <div class="prog-card-title">Основная программа</div>
+      <div class="prog-card-desc" style="margin-bottom:10px">Время проведения — с 12:00 до 17:00. В программу включены:</div>
+      <div class="prog-card-desc">1. Мастер-класс по парению в бане<br>2. Дружеский матч по настольному хоккею<br>3. Вкусный обед из тандыра, фотографии на память</div>
     </div>
   </div>
 
@@ -762,8 +822,8 @@ body {
         </svg>
       </div>
       <div class="feat-body">
-        <div class="feat-name">Утренний забег</div>
-        <div class="feat-desc">Набережная Красноярска. 5 или 10 км — выбор за вами.</div>
+        <div class="feat-name">Утренний забег или прогулка</div>
+        <div class="feat-desc">10 км или неспешная прогулка по набережной Енисея.</div>
       </div>
     </div>
 
@@ -781,8 +841,8 @@ body {
         </svg>
       </div>
       <div class="feat-body">
-        <div class="feat-name">Настоящая баня</div>
-        <div class="feat-desc">Уже растоплена к вашему приезду. Берёзовые веники, пар и отдых.</div>
+        <div class="feat-name">Русская баня</div>
+        <div class="feat-desc">Уже растоплена к вашему приезду. Дубовые веники и мастер-класс по парению.</div>
       </div>
     </div>
 
@@ -800,8 +860,8 @@ body {
         </svg>
       </div>
       <div class="feat-body">
-        <div class="feat-name">Горячий плов</div>
-        <div class="feat-desc">Мясо, рис, специи — из казана, на живом огне.</div>
+        <div class="feat-name">Обед из тандыра</div>
+        <div class="feat-desc">Плов, мясо и свежие овощи. Никаких быстрых углеводов.</div>
       </div>
     </div>
 
@@ -819,8 +879,8 @@ body {
         </svg>
       </div>
       <div class="feat-body">
-        <div class="feat-name">Активный отдых</div>
-        <div class="feat-desc">Настольный теннис, хоккей, музыка и живое общение.</div>
+        <div class="feat-name">Живое общение</div>
+        <div class="feat-desc">Беседы, хохмы, анекдоты и дружеский матч по настольному хоккею.</div>
       </div>
     </div>
 
@@ -854,7 +914,7 @@ body {
     </div>
 
     <div class="contact-hint">
-      Напишите или позвоните Антону, чтобы подтвердить участие — это поможет организовать всё комфортно для каждого.
+      Напишите в Telegram Артёму Т. или Антону Моцкусу — <a href="https://t.me/anton_mockus" target="_blank" style="color:var(--forest);font-weight:500;text-decoration:none;border-bottom:0.5px solid var(--forest2)">@anton_mockus</a> — чтобы подтвердить участие.
     </div>
   </div>
 </div>
@@ -865,7 +925,7 @@ body {
 
   <div class="faq-item">
     <div class="faq-q">Обязательно бежать? Можно приехать только на основную часть?</div>
-    <div class="faq-a">Конечно. Забег — для тех, кому это близко. Если хотите — просто приезжайте к ~11:00 на <a href="https://yandex.ru/maps/62/krasnoyarsk/?text=%D1%83%D0%BB.+%D0%93%D1%80%D0%B0%D1%84%D0%B0+%D0%9B%D1%8C%D0%B2%D0%B0+%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B3%D0%BE+4" target="_blank">ул. Графа Льва Толстого, 4</a>.</div>
+    <div class="faq-a">Конечно. Забег — для тех, кому это близко. Если хотите — просто приезжайте к 12:00 на <a href="https://2gis.ru/krasnoyarsk/geo/985798073734108/92.542214,56.066721" target="_blank">ул. Графа Льва Толстого, 4</a>.</div>
   </div>
 
   <div class="faq-item">
@@ -921,7 +981,7 @@ body {
       <div class="finale-opt-icon house-icon">🏡</div>
       <div class="finale-opt-text">
         <div class="finale-opt-title">После финиша</div>
-        <div class="finale-opt-sub">С 11:00 · ул. Графа Льва Толстого, 4</div>
+        <div class="finale-opt-sub">С 12:00 · ул. Графа Льва Толстого, 4</div>
       </div>
     </div>
   </div>
